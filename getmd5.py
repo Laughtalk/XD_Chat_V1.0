@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import hashlib
 import sys
@@ -5,6 +6,9 @@ import sys
 _FILE_SLIM = 65535
 
 def getMd5OfFile(filename):
+	'''
+	用hashlib包计算MD5码
+	'''
 	hmd5 = hashlib.md5()
 	fp = open(filename,"rb")
 	f_size = os.stat(filename).st_size
